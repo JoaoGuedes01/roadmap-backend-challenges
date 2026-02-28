@@ -10,6 +10,7 @@ This repository contains solutions to backend projects from [roadmap.sh](https:/
 ## Projects
 
 - [Task Tracker CLI](task-tracker-01/readme.md): A Python command-line application for managing tasks (add, list, update, delete, mark status). No external libraries required. - [Project Link](https://roadmap.sh/projects/task-tracker)
+- [Number Guessing Game](number-guessing-game-02/README.md): A Python command-line game where the player tries to guess a randomly selected number between 1 and 100. The number of allowed guesses depends on the chosen difficulty level. - [Project Link](https://roadmap.sh/projects/number-guessing-game)
 
 More projects will be added as progress continues through the roadmap.
 
