@@ -11,6 +11,7 @@ This repository contains solutions to backend projects from [roadmap.sh](https:/
 
 - [Task Tracker CLI](task-tracker-01/readme.md): A Python command-line application for managing tasks (add, list, update, delete, mark status). No external libraries required. - [Project Link](https://roadmap.sh/projects/task-tracker)
 - [Number Guessing Game](number-guessing-game-02/README.md): A Python command-line game where the player tries to guess a randomly selected number between 1 and 100. The number of allowed guesses depends on the chosen difficulty level. - [Project Link](https://roadmap.sh/projects/number-guessing-game)
+- [Github User Activity](github-user-activity-03/README.md): Small Python CLI that uses the Github public API to fetch public data on user activity with the /users/{username}/events endpoint. Uses a GH_TOKEN for authenticated requests and has error handling. [Project Link](https://roadmap.sh/projects/github-user-activity)
 
 More projects will be added as progress continues through the roadmap.
 
