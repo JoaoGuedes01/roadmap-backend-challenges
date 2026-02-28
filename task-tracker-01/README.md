@@ -74,10 +74,6 @@ python app.py mark-done 1
 
 ## Challenge Link
 
-Add the link to the original challenge here:
+Link to challenge: https://roadmap.sh/projects/task-tracker
 
-[Roadmap.sh Task Tracker CLI Challenge](https://roadmap.sh/projects/task-tracker)
-
-## License
-
-MIT
+[Roadmap.sh](https://roadmap.sh)
