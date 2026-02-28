@@ -23,6 +23,7 @@ task-cli list done
 task-cli list todo
 task-cli list in-progress
 ```
+
 # Task Tracker CLI Challenge
 
 This project is a command-line interface (CLI) application for managing tasks, implemented in Python. It is designed to help users add, list, update, and delete tasks efficiently from the terminal, without using any external libraries.
@@ -53,24 +54,29 @@ python app.py [command] [options]
 
 - `add <task>`: Add a new task
 - `list`: List all tasks
+- `list <status_filter>`: List all tasks filtered by status (todo/in-progress/done)
 - `update <id> <new-task>`: Update a task
 - `delete <id>`: Delete a task
-- `complete <id>`: Mark a task as complete
-- `incomplete <id>`: Mark a task as incomplete
-
+- `mark-done <id>`: Mark a task as done
+- `mark-in-progress <id>`: Mark a task as in progress
+- `mark-todo <id>`: Mark a task as todo
 
 ## Example
 
 ```bash
 python app.py add "Finish documentation"
+python app.py update 1 "New task name"
+python app.py delete 1
 python app.py list
-python app.py complete 1
+python app.py list done
+python app.py mark-done 1
 ```
+
 ## Challenge Link
 
 Add the link to the original challenge here:
 
-[Roadmap.sh Task Tracker CLI Challenge](<your-challenge-link-here>)
+[Roadmap.sh Task Tracker CLI Challenge](https://roadmap.sh/projects/task-tracker)
 
 ## License
 
