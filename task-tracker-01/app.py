@@ -6,7 +6,6 @@ import os
 save_file_name = "tasks_data.json"
 save_file_path = f"./{save_file_name}"
 
-
 def ReadFromFile(file_name):
     if not os.path.exists(file_name):
         SaveToFile([], file_name)
@@ -59,11 +58,23 @@ def handle_add(task_title):
 def handle_update(task_id, new_name):
     try:
         for task in tasks:
-            print(task["id"])
             if task["id"] == task_id:
                 task["description"] = new_name
+                task["updated_at"] = GetTime()
                 SaveToFile(tasks, save_file_path)
                 return f"Successfully updated task name for id: {task_id}"
+        return f"Failed to locate task with id: {task_id}"
+    except Exception as e:
+        return f"Error during task creation: {e}"
+    
+def handle_update_status(task_id, new_status):
+    try:
+        for task in tasks:
+            if task["id"] == task_id:
+                task["status"] = new_status
+                task["updated_at"] = GetTime()
+                SaveToFile(tasks, save_file_path)
+                return f"Successfully updated task status for id: {task_id}"
         return f"Failed to locate task with id: {task_id}"
     except Exception as e:
         return f"Error during task creation: {e}"
@@ -72,7 +83,6 @@ def handle_update(task_id, new_name):
 def handle_delete(task_id):
     try:
         for task in tasks:
-            print(task["id"])
             if task["id"] == task_id:
                 tasks.remove(task)
                 SaveToFile(tasks, save_file_path)
@@ -81,6 +91,16 @@ def handle_delete(task_id):
     except Exception as e:
         return f"Error during task creation: {e}"
 
+def FilterTasksByStatus(status):
+    return [task for task in tasks if task["status"] == status]
+
+def PrintTasks(tasks):
+    if not tasks:
+        return "No tasks found"
+    result = "Tasks:\n"
+    for task in tasks:
+        result += f"ID: {task['id']}, Description: {task['description']}, Status: {task['status']}\n"
+    return result
 
 def main():
     global tasks
@@ -109,8 +129,33 @@ def main():
                 return "You need to specify task id to delete"
             task_id = int(args[2])
             return handle_delete(task_id)
+        case "mark-done":
+            if len(args) < 3:
+                return "You need to specify task id to mark as done"
+            task_id = int(args[2])
+            return handle_update_status(task_id, "done")
+        case "mark-in-progress":
+            if len(args) < 3:
+                return "You need to specify task id to mark as in-progress"
+            task_id = int(args[2])
+            return handle_update_status(task_id, "in-progress")
+        case "mark-todo":
+            if len(args) < 3:
+                return "You need to specify task id to mark as todo"
+            task_id = int(args[2])
+            return handle_update_status(task_id, "todo")
         case "list":
-            return tasks
+            if len(args) < 3:
+                return PrintTasks(tasks)
+            filter = args[2]
+            if filter == "todo":
+                return PrintTasks(FilterTasksByStatus("todo"))
+            elif filter == "done":
+                return PrintTasks(FilterTasksByStatus("done"))
+            elif filter == "in-progress":
+                return PrintTasks(FilterTasksByStatus("in-progress"))
+            else:
+                return f"Unknown filter: {filter}"
         case _:
             return f"No command {command} is available"
 
