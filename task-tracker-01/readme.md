@@ -1,12 +1,8 @@
 # Task Tracker CLI Challenge
 
-This project is a command-line interface (CLI) application for managing tasks, implemented in Python. It is designed to help users add, list, update, and delete tasks efficiently from the terminal, without using any external libraries.
-
-## Challenge Link
-
 Link to challenge: https://roadmap.sh/projects/task-tracker
 
-[Roadmap.sh](https://roadmap.sh)
+This project is a command-line interface (CLI) application for managing tasks, implemented in Python. It is designed to help users add, list, update, and delete tasks efficiently from the terminal, without using any external libraries.
 
 ## Features
 
