@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter - Length</title>
+  </head>
+  <body>
+    <h1>Unit Converter - Length</h1>
+    <nav>
+      <button onclick="location.href = 'length.html'" disabled>Length</button>
+      <button onclick="location.href = 'weight.html'">Weight</button>
+      <button onclick="location.href = 'temp.html'">Temperature</button>
+    </nav>
+    <form method="POST" target="_self">
+      <input
+        type="number"
+        id="inputValue"
+        name="inputValue"
+        placeholder="Enter value"
+        required
+      />
+      <select id="fromUnit" name="fromUnit" required>
+        <option value="" disabled selected>Select input unit</option>
+        <option value="mm">Millimeters</option>
+        <option value="cm">Centimeters</option>
+        <option value="m">Meters</option>
+        <option value="km">Kilometers</option>
+        <option value="in">Inches</option>
+        <option value="ft">Feet</option>
+        <option value="yd">Yards</option>
+        <option value="mi">Miles</option>
+      </select>
+      <select id="toUnit" name="toUnit" required>
+        <option value="" disabled selected>Select output unit</option>
+        <option value="mm">Millimeters</option>
+        <option value="cm">Centimeters</option>
+        <option value="m">Meters</option>
+        <option value="km">Kilometers</option>
+        <option value="in">Inches</option>
+        <option value="ft">Feet</option>
+        <option value="yd">Yards</option>
+        <option value="mi">Miles</option>
+      </select>
+      <button type="submit">Convert</button>
+    </form>
+  </body>
+</html>

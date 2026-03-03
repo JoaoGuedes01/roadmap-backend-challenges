@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter - Temperature</title>
+  </head>
+  <body>
+    <h1>Unit Converter - Temperature</h1>
+    <nav>
+      <button onclick="location.href = 'length.html'">Length</button>
+      <button onclick="location.href = 'weight.html'">Weight</button>
+      <button onclick="location.href = 'temp.html'" disabled>
+        Temperature
+      </button>
+    </nav>
+    <form method="POST" target="_self">
+      <input
+        type="number"
+        id="inputValue"
+        name="inputValue"
+        placeholder="Enter value"
+        required
+      />
+      <select id="fromUnit" name="fromUnit" required>
+        <option value="" disabled selected>Select input unit</option>
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+      </select>
+      <select id="toUnit" name="toUnit" required>
+        <option value="" disabled selected>Select output unit</option>
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+      </select>
+      <button type="submit">Convert</button>
+    </form>
+  </body>
+</html>
