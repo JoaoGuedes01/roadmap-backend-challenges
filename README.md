@@ -13,6 +13,7 @@ This repository contains solutions to backend projects from [roadmap.sh](https:/
 - [Number Guessing Game](number-guessing-game-02/README.md): A Python command-line game where the player tries to guess a randomly selected number between 1 and 100. The number of allowed guesses depends on the chosen difficulty level. - [Project Link](https://roadmap.sh/projects/number-guessing-game)
 - [Github User Activity](github-user-activity-03/README.md): Small Python CLI that uses the Github public API to fetch public data on user activity with the /users/{username}/events endpoint. Uses a GH_TOKEN for authenticated requests and has error handling. [Project Link](https://roadmap.sh/projects/github-user-activity)
 - [Expense Tracker CLI](expense-tracker-04/README.md): A Python CLI tool for tracking expenses, managing monthly budgets, categorizing spending, and exporting data to CSV. Supports adding, updating, deleting, and listing expenses, as well as viewing summaries and setting budgets. [Project Link](https://roadmap.sh/projects/expense-tracker)
+- [Unit Converter](unit-converter-05/python/README.md): A Python web application for converting units of length, temperature, and weight. Includes a simple web interface and supports Docker deployment. [Project Link](https://roadmap.sh/projects/unit-converter)
 
 More projects will be added as progress continues through the roadmap.
 
