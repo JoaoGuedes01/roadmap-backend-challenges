@@ -1,6 +1,6 @@
 # Expense Tracker
 
-This project is a simple command-line tool for tracking expenses and managing monthly budgets. This is part of the [Roadmap.sh Cackend Roadmap](https://roadmap.sh/backend) project challenges, specifically the [Expense Tracker Challenge](https://roadmap.sh/projects/expense-tracker).
+This project is a simple command-line tool for tracking expenses and managing monthly budgets. This is part of the [Roadmap.sh Backend Roadmap](https://roadmap.sh/backend) project challenges, specifically the [Expense Tracker Challenge](https://roadmap.sh/projects/expense-tracker).
 
 ## Features
 
